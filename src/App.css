@@ -1,0 +1,305 @@
+
+/*! style main */
+
+main{
+  position: relative;
+  display: flex;
+  height: 100dvh;
+}
+
+/*! style menu */
+
+.menu{
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+}
+
+.boxmenu{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boxmenu > div{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.boxmenu > div > i{
+  font-size: 30px;
+}
+
+.boxmenu > div:nth-of-type(2) > i {
+  cursor: pointer;
+}
+
+.boxmenu > div > p{
+  font-size: 20px;
+}
+
+/*! Win */
+
+.win{
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0,0);
+  width: 400px;
+  height: 200px;
+  background-color: #000;
+}
+
+.addscalebox{
+  animation: scalebox 0.3s linear forwards;
+}
+
+.boxwin{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxwin > h1{
+  color: #fff;
+  font-size: 50px;
+}
+
+.boxwin > button{
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 5px;
+  font-size: 20px;
+  background-color: #fff;
+}
+
+@keyframes scalebox {
+  0%{
+    transform: translate(-50%,-50%) scale(0,0);
+  }
+  100%{
+    transform: translate(-50%,-50%) scale(1,1);
+  }
+}
+
+/*! style component console */
+
+.console{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.showinput > h2{
+  font-size: 30px;
+  text-align: center;
+}
+
+.showinput > div{
+  margin-top: 20px;
+  display: flex;
+  column-gap: 5px;
+  justify-content: center;
+}
+
+.showinput > div > span{
+  font-size: 30px;
+  height: 30px;
+  width: 30px;
+  border-bottom: 2px solid #000;
+  display: flex;
+  justify-content: center;
+}
+
+.letterbox{
+  margin-top: 100px;
+}
+
+.letterbox > div{
+  display: flex;
+  justify-content: center;
+}
+
+.letterbox > div > p{
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.letterbox > div > p:hover{
+  background-color: black;
+  color: #fff !important;
+}
+
+/*! style component hangman */
+
+.hangman{
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.hangmanbox{
+  position: relative;
+  width: 320px;
+  height: 400px;
+}
+
+.hangmanbox > h2{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.hangmanbox .rope{
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+}
+
+.hangmanbox .head{
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.hangmanbox .body{
+  stroke-dasharray: 110;
+  stroke-dashoffset: 110;
+}
+
+.hangmanbox .armright{
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.hangmanbox .armleft{
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.hangmanbox .legleft{
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.hangmanbox .legright{
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+ 
+.addani_rope{
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: rope 0.3s linear forwards;
+}
+
+.addani_head{
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: head 0.3s linear forwards;
+}
+
+.addani_body{
+  stroke-dasharray: 110;
+  stroke-dashoffset: 110;
+  animation: body 0.3s linear forwards;
+}
+
+.addani_armright{
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: armright 0.3s linear forwards;
+}
+
+.addani_armleft{
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: armright 0.3s linear forwards;
+}
+
+.addani_legleft{
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: legleft 0.3s linear forwards;
+}
+
+.addani_legright{
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: legright 0.3s linear forwards;
+}
+
+@keyframes rope{
+  0%{
+    stroke-dashoffset: 50;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes head{
+  0%{
+    stroke-dashoffset: 200;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes body{
+  0%{
+    stroke-dashoffset: 110;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes armright{
+  0%{
+    stroke-dashoffset: 100;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes armleft{
+  0%{
+    stroke-dashoffset: 100;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes legleft{
+  0%{
+    stroke-dashoffset: 100;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes legright{
+  0%{
+    stroke-dashoffset: 100;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
+}

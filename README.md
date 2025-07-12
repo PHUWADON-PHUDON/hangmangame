@@ -1,6 +1,6 @@
 # React + Vite
 
-[Open The Game](https://hangmandevbyphuwadon.netlify.app/)
+[Open The Game](https://hangmanphudon.netlify.app/)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
